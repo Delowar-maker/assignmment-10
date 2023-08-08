@@ -1,0 +1,14 @@
+npx create-next-app
+npm run dev
+1.	.next: Next.js generates the production build of your application. should not modify this folder manually, as it will be overwritten when you run npm run build.
+2.	node_modules: This is where Node.js installs the packages that your project depends on.  Should not modify this folder manually, either, as it will be updated when you run npm install or npm update.
+3.	public: This is where you can store static assets that will be served by Next.js, such as images, fonts, icons, etc. Can access these assets by using a / prefix in your code. For example, if you have an image called logo.png in the public folder, you can use <img src="/logo.png" /> in our React component.
+4.	next.config.js: This is an optional file that allows you to configure some advanced features of Next.js, such as custom webpack config, custom server, environment variables, etc.  
+
+5.	package.json: This is a standard file that contains information about your project, such as its name, version, description, dependencies, scripts, etc. I can use this file to manage my project and run commands with npm.
+The app directory has some special files and folders that are important to understand:
+1. layout.js: This is an optional file that allows  to define a shared layout for a route segment and its children. I can use this file to add common UI elements, such as a header, a footer, a sidebar, etc.
+2. page.js: This is where i put my page components that correspond to different routes in my application. Next.js uses a file-system based routing system, which means that every file in this folder becomes a route with the same name. For example, if  I have a file called about.js in the pages folder, it will be accessible at http://localhost:3000/about. 
+
+This is a required file that allows you to define the unique UI of a route and make it publicly accessible. I can use this file to display the main content of your page, such as a about, a product , a form, etc.
+3.	styles/:  I can define your global styles in globals.css, and specific styles for the About component in page.module.css. Next.js uses CSS Modules by default, which allows to scope styles to individual components. 
